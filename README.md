@@ -1,2 +1,15 @@
-# Monitoramento-de-temperatura-e-controle-de-acionamento-de-motor-DC
-Circuito de Monitoramento de Temperatura com Controle de Acionamento de Motor de Corrente Contínua com LED e Arduino - [Relé SPDT, Resistor, Transistor NPN, Diodos, LED, Bateria 9V, Sensor de Temperatura TMP36 &amp; Motor CC]
+# Circuito de Monitoramento de Temperatura com Controle de Acionamento de Motor de Corrente Contínua com LED e Arduino - [Relé SPDT, Resistor, Transistor NPN, Diodos, LED, Bateria 9V, Sensor de Temperatura TMP36 &amp; Motor CC]
+O Projeto foi realizado com Arduino, Resistor, LED, Sensor de Temperatura TMP36, Diodos de Proteção, Relé SPDT, Transistor NPN, Bateria 9V e Motor de Corrente Contínua. O projeto consiste no acionamento de um LED no momento em que a Temperatura Ambiente ultrapassa um certo Valor, podendo ser usado como recurso de Segurança e Automação. Nesse caso, o Arduino enviaria um Sinal de Controle para um Circuito de Potência que, por sua vez, acionaria um Motor de Corrente Contínua, como por exemplo, uma pequena ventoinha de motor ou um ventilador para reestabelecer a Temperatura Ambiente. Aqui está um anexo que mostra o circuito montado com todos os seus componentes, com desenho projetado em Tinkercad.
+<br>
+<div style="display: inline_block" align="center">
+<img src="https://user-images.githubusercontent.com/112359793/204161454-2ad25ac1-9c06-4629-b3b8-cc5991c54929.png">
+</img>
+</div>
+<h2>Funcionamento: Circuito de Controle</h2>
+A primeira parte do projeto compreende o Circuito de Controle. O Circuito de Controle pode ser definido como o Circuito que realiza o Monitoramento de Sinais de Entrada e a Produção de Sinais de Controle com o auxílio do Arduino, um componente programável em C++ que produz uma Saída Digital que influenciará o Circuito de Potência, que é a segunda parte do projeto em questão. Esse Circuito de Controle é constituído pelo Arduino, um Resistor que limita a Passagem de Corrente Elétrica, seguido por um LED - Diodo Emissor de Luz (que avisa ao usuário que a Temperatura foi ultrapassada) - e um Sensor de Temperatura TMP36 ligado em um Terminal Positivo, um Negativo, e em uma Saída Analógica A0 ligada ao Arduino, que possui uma Escala de Medição de 10mV/ºC na Saída.
+<h2>Funcionamento: Circuito de Potência</h2>
+A segunda parte do projeto compreende o Circuito de Potência. O Circuito de Potência é definido como a parte do Circuito que recebe os Sinais de Controle e os amplifica em novas consequências ao circuito, uma vez que sua configuração aciona Dispositivos de Correntes Elevadas, necessitando de uma carga maior. Essa parte do circuito opera com um Resistor que limita a Corrente Elétrica da Saída de Controle (Saída Digital do Arduíno no Pino 12) que funciona como uma Corrente de Base para o Transistor NPN. Esse Transistor funciona como uma Chave, fechando o Circuito pela Passagem da Corrente de Base, e fazendo a Corrente percorrer a Bobina do Relé, acionando-o e motivando o acionamento posterior do Motor de Corrente Contínua pela Indução Eletromagnética da Bobina do Relé. Esse Circuito fica submetido a um Aterramento do Arduino e a uma Diferença de Potencial (Tensão) de 9V de uma Bateria.
+<h2>Extra: Diodos de Proteção</h2>
+Um fator importante de ser destacado são os Diodos de Proteção, esses Diodos funcionam para proteger o Circuito de Potência das Sobrecargas ou Descargas Elétricas existentes nas Bobinas do Relé e do Motor CC quando as Bobinas são desligadas. Dessa forma, é uma maneira de proteger os Componentes do Circuito de eventuais danos.
+
+
