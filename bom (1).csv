@@ -1,0 +1,10 @@
+﻿Nome,Quantidade,Componente
+"UArduino",1," Arduino Uno R3"
+"RResistor, RResistor2",2,"1 kΩ Resistor"
+"DLED",1,"Vermelho LED"
+"UTMP36",1," Sensor de temperatura [TMP36]"
+"BATBateria9V",1," Bateria 9V"
+"MMotorCC",1," Motor CC"
+"TTransistorNPN",1," Transistor NPN (BJT)"
+"KReléSPDT",1," Relé SPDT"
+"DDiodo1, DDiodo2",2," Diodo"
